@@ -1,0 +1,14 @@
+{
+  "name": "aashmi-beauty-parlour",
+  "version": "1.0.0",
+  "description": "Complete Beauty Parlour Website & Management System",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
