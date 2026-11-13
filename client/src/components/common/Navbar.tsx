@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Calendar, Clock, MapPin, Menu, Phone, Sparkles, X } from 'lucide-react';
+import { Calendar, Clock, Menu, Phone, Sparkles, X } from 'lucide-react';
 import { useSettings } from '../../context/SettingsContext';
 
 interface NavbarProps {
@@ -11,6 +11,47 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrackModal }) => {
   const { settings } = useSettings();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Scroll detection state: Disappear on scroll down, reappear on scroll up
+  const [isVisible, setIsVisible] = useState(true);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Reset visibility when route changes
+  useEffect(() => {
+    setIsVisible(true);
+    setIsAtTop(true);
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Do not hide header if mobile menu is open
+      if (mobileMenuOpen) return;
+
+      if (currentScrollY <= 20) {
+        setIsAtTop(true);
+        setIsVisible(true);
+      } else {
+        setIsAtTop(false);
+        // If scrolling down by more than 10px, hide header board
+        if (currentScrollY > lastScrollY + 5 && currentScrollY > 70) {
+          setIsVisible(false);
+        } else if (currentScrollY < lastScrollY - 5) {
+          // If scrolling up, show header board
+          setIsVisible(true);
+        }
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, mobileMenuOpen]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -24,9 +65,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrackModal }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rosegold-100">
-      {/* Top Announcement Bar */}
-      <div className="bg-gradient-to-r from-rosegold-600 via-blush-600 to-rosegold-700 text-white text-xs sm:text-sm py-1.5 px-4">
+    <header
+      className={`sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rosegold-100 transition-transform duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0' : '-translate-y-full shadow-none pointer-events-none'
+      }`}
+    >
+      {/* Top Announcement Bar / Board - disappears on scroll down */}
+      <div
+        className={`bg-gradient-to-r from-rosegold-600 via-blush-600 to-rosegold-700 text-white text-xs sm:text-sm px-4 transition-all duration-300 overflow-hidden ${
+          isAtTop ? 'py-1.5 max-h-16 opacity-100' : 'py-0 max-h-0 opacity-0'
+        }`}
+      >
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-4 text-center sm:text-left">
           <div className="flex items-center gap-2 justify-center">
             <Sparkles className="w-3.5 h-3.5 text-blush-200 animate-pulse" />
@@ -123,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrackModal }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-rosegold-100 px-4 pt-2 pb-6 space-y-2 animate-fadeIn">
+        <div className="lg:hidden bg-white border-b border-rosegold-100 px-4 pt-2 pb-6 space-y-2 animate-fadeIn pointer-events-auto">
           {navLinks.map((link) => (
             <Link
               key={link.path}

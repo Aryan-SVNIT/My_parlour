@@ -241,3 +241,4 @@ CREATE POLICY "Public Read Settings" ON website_settings FOR SELECT USING (TRUE)
 CREATE POLICY "Public Insert Appointments" ON appointments FOR INSERT WITH CHECK (TRUE);
 -- Public can check own appointment by booking_id & customer_phone
 CREATE POLICY "Public Read Own Appointment" ON appointments FOR SELECT USING (TRUE);
+

@@ -348,3 +348,4 @@ export const AdminOffersPage: React.FC = () => {
     </div>
   );
 };
+

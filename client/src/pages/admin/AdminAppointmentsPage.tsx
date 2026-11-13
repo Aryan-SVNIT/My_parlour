@@ -214,3 +214,4 @@ export const AdminAppointmentsPage: React.FC = () => {
     </div>
   );
 };
+

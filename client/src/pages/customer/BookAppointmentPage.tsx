@@ -808,3 +808,4 @@ export const BookAppointmentPage: React.FC = () => {
     </div>
   );
 };
+

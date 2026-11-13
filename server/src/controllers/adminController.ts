@@ -981,3 +981,4 @@ export function exportAppointmentsCsv(_req: Request, res: Response): void {
   res.setHeader('Content-Disposition', `attachment; filename="aashmi_appointments_${new Date().toISOString().split('T')[0]}.csv"`);
   res.status(200).send(csvContent);
 }
+

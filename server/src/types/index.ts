@@ -209,3 +209,4 @@ export interface DatabaseSchema {
   website_settings: WebsiteSettings;
   payments: Payment[];
 }
+

@@ -9,3 +9,4 @@ router.get('/me', requireAdmin, getCurrentUser);
 router.put('/change-password', requireAdmin, changePassword);
 
 export default router;
+

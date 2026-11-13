@@ -108,3 +108,4 @@ router.get('/reports', getReports);
 router.get('/reports/export-csv', exportAppointmentsCsv);
 
 export default router;
+

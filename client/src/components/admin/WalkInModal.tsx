@@ -285,3 +285,4 @@ export const WalkInModal: React.FC<WalkInModalProps> = ({ isOpen, onClose, onSuc
     </div>
   );
 };
+

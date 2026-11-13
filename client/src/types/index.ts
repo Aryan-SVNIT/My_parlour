@@ -173,3 +173,4 @@ export interface TimeSlot {
   available: boolean;
   reason?: string;
 }
+

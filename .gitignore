@@ -1,8 +1,41 @@
+# Dependencies
 node_modules/
+**/node_modules/
+
+# Build output
 dist/
+**/dist/
+build/
+**/build/
+.next/
+.vite/
+coverage/
+
+# Environment files and secrets
 .env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Runtime data and uploads (may contain customer information)
+server/data/*.json
+!server/data/.gitkeep
+server/uploads/*
+!server/uploads/.gitkeep
+
+# OS / editor
 .DS_Store
+Thumbs.db
 .vscode/
 .idea/
-server/data/*.tmp
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo

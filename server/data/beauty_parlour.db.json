@@ -42,6 +42,50 @@
       "visit_count": 2,
       "created_at": "2026-10-15T12:00:00.000Z",
       "updated_at": "2026-11-05T14:00:00.000Z"
+    },
+    {
+      "id": "cust-1794464372439",
+      "full_name": "Aryan",
+      "phone": "5454555454",
+      "email": "goyalaryan06102006@gmail.com",
+      "notes": "",
+      "total_spend": 1199,
+      "visit_count": 1,
+      "created_at": "2026-11-12T06:19:32.439Z",
+      "updated_at": "2026-11-12T06:19:32.439Z"
+    },
+    {
+      "id": "cust-1794465833616",
+      "full_name": "aashmi",
+      "phone": "8989898989",
+      "email": "+565",
+      "notes": "",
+      "total_spend": 3999,
+      "visit_count": 1,
+      "created_at": "2026-11-12T06:43:53.616Z",
+      "updated_at": "2026-11-12T06:43:53.616Z"
+    },
+    {
+      "id": "cust-1794554090824",
+      "full_name": "sameer",
+      "phone": "8784536514",
+      "email": "d@gmail.com",
+      "notes": "",
+      "total_spend": 8247,
+      "visit_count": 1,
+      "created_at": "2026-11-13T07:14:50.824Z",
+      "updated_at": "2026-11-13T07:14:50.824Z"
+    },
+    {
+      "id": "cust-1794566086859",
+      "full_name": "assa",
+      "phone": "5454545644",
+      "email": "sasasasas",
+      "notes": "",
+      "total_spend": 1848,
+      "visit_count": 1,
+      "created_at": "2026-11-13T10:34:46.859Z",
+      "updated_at": "2026-11-13T10:34:46.859Z"
     }
   ],
   "service_categories": [
@@ -472,14 +516,14 @@
       "end_time": "11:15",
       "total_duration_minutes": 45,
       "total_amount": 499,
-      "status": "confirmed",
+      "status": "completed",
       "payment_status": "pending",
       "payment_method": "cash",
       "customer_notes": "Quick haircut required.",
       "admin_notes": "Confirmed via phone call",
       "staff_id": "staff-1",
       "created_at": "2026-11-11T16:00:00.000Z",
-      "updated_at": "2026-11-11T16:30:00.000Z"
+      "updated_at": "2026-11-13T07:16:01.970Z"
     },
     {
       "id": "apt-4",
@@ -501,6 +545,88 @@
       "staff_id": "staff-1",
       "created_at": "2026-11-04T11:00:00.000Z",
       "updated_at": "2026-11-05T16:05:00.000Z"
+    },
+    {
+      "id": "apt-1794464372439",
+      "booking_id": "ASH-2026-8923",
+      "customer_id": "cust-1794464372439",
+      "customer_name": "Aryan",
+      "customer_phone": "5454555454",
+      "customer_email": "goyalaryan06102006@gmail.com",
+      "appointment_date": "2026-11-12",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "total_duration_minutes": 60,
+      "total_amount": 1199,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "pay_at_parlour",
+      "admin_notes": "",
+      "staff_id": "staff-1",
+      "created_at": "2026-11-12T06:19:32.439Z",
+      "updated_at": "2026-11-12T06:21:37.677Z"
+    },
+    {
+      "id": "apt-1794465833616",
+      "booking_id": "ASH-2026-1257",
+      "customer_id": "cust-1794465833616",
+      "customer_name": "aashmi",
+      "customer_phone": "8989898989",
+      "customer_email": "+565",
+      "appointment_date": "2026-11-12",
+      "start_time": "14:00",
+      "end_time": "17:00",
+      "total_duration_minutes": 180,
+      "total_amount": 3999,
+      "status": "rejected",
+      "payment_status": "pending",
+      "payment_method": "pay_at_parlour",
+      "admin_notes": "",
+      "staff_id": "staff-1",
+      "created_at": "2026-11-12T06:43:53.616Z",
+      "updated_at": "2026-11-12T06:44:59.271Z"
+    },
+    {
+      "id": "apt-1794554090824",
+      "booking_id": "ASH-2026-4714",
+      "customer_id": "cust-1794554090824",
+      "customer_name": "sameer",
+      "customer_phone": "8784536514",
+      "customer_email": "d@gmail.com",
+      "appointment_date": "2026-11-13",
+      "start_time": "15:30",
+      "end_time": "19:50",
+      "total_duration_minutes": 260,
+      "total_amount": 8247,
+      "status": "completed",
+      "payment_status": "pending",
+      "payment_method": "pay_at_parlour",
+      "customer_notes": "gg",
+      "admin_notes": "",
+      "staff_id": "staff-1",
+      "created_at": "2026-11-13T07:14:50.824Z",
+      "updated_at": "2026-11-13T10:17:24.937Z"
+    },
+    {
+      "id": "apt-1794566086859",
+      "booking_id": "ASH-2026-3224",
+      "customer_id": "cust-1794566086859",
+      "customer_name": "assa",
+      "customer_phone": "5454545644",
+      "customer_email": "sasasasas",
+      "appointment_date": "2026-11-13",
+      "start_time": "17:30",
+      "end_time": "19:10",
+      "total_duration_minutes": 100,
+      "total_amount": 1848,
+      "status": "pending",
+      "payment_status": "pending",
+      "payment_method": "cash",
+      "customer_notes": "assa",
+      "admin_notes": "",
+      "staff_id": "staff-1",
+      "created_at": "2026-11-13T10:34:46.859Z",
+      "updated_at": "2026-11-13T10:34:46.859Z"
     }
   ],
   "appointment_services": [
@@ -543,6 +669,62 @@
       "service_name": "Moroccan Oil Hair Spa",
       "price_at_booking": 1199,
       "duration_minutes": 60
+    },
+    {
+      "id": "as-1794464372439-0",
+      "appointment_id": "apt-1794464372439",
+      "service_id": "srv-2",
+      "service_name": "Moroccan Oil Hair Spa",
+      "price_at_booking": 1199,
+      "duration_minutes": 60
+    },
+    {
+      "id": "as-1794465833616-0",
+      "appointment_id": "apt-1794465833616",
+      "service_id": "srv-3",
+      "service_name": "Keratin Hair Smoothening",
+      "price_at_booking": 3999,
+      "duration_minutes": 180
+    },
+    {
+      "id": "as-1794554090824-0",
+      "appointment_id": "apt-1794554090824",
+      "service_id": "srv-9",
+      "service_name": "Deep Pore Fruit Cleanup",
+      "price_at_booking": 599,
+      "duration_minutes": 40
+    },
+    {
+      "id": "as-1794554090824-1",
+      "appointment_id": "apt-1794554090824",
+      "service_id": "srv-19",
+      "service_name": "Luxury Almond Glow Manicure",
+      "price_at_booking": 649,
+      "duration_minutes": 40
+    },
+    {
+      "id": "as-1794554090824-2",
+      "appointment_id": "apt-1794554090824",
+      "service_id": "srv-21",
+      "service_name": "Pre-Bridal Radiance Ritual",
+      "price_at_booking": 6999,
+      "duration_minutes": 180
+    },
+    {
+      "id": "as-1794566086860-0",
+      "appointment_id": "apt-1794566086859",
+      "service_id": "srv-2",
+      "service_name": "Moroccan Oil Hair Spa",
+      "price_at_booking": 1199,
+      "duration_minutes": 60
+    },
+    {
+      "id": "as-1794566086860-1",
+      "appointment_id": "apt-1794566086859",
+      "service_id": "srv-19",
+      "service_name": "Luxury Almond Glow Manicure",
+      "price_at_booking": 649,
+      "duration_minutes": 40
     }
   ],
   "staff": [
@@ -575,6 +757,16 @@
       "avatar_url": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80",
       "is_active": true,
       "created_at": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "staff-1794464574666",
+      "name": "Meenu Goyal",
+      "role": "Overall expert",
+      "phone": "9988776655",
+      "email": "",
+      "avatar_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+      "is_active": true,
+      "created_at": "2026-11-12T06:22:54.666Z"
     }
   ],
   "staff_availability": [

@@ -370,3 +370,4 @@ export function cancelCustomerBooking(req: Request, res: Response): void {
     res.status(500).json({ success: false, message: 'Failed to cancel appointment.' });
   }
 }
+

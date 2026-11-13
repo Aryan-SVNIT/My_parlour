@@ -303,3 +303,4 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
     </div>
   );
 };
+

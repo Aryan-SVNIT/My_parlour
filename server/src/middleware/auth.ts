@@ -36,3 +36,4 @@ export function requireAdmin(req: AuthenticatedRequest, res: Response, next: Nex
     res.status(401).json({ success: false, message: 'Invalid or expired session token. Please log in again.' });
   }
 }
+
